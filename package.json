@@ -1,0 +1,27 @@
+{
+  "name": "pic",
+  "version": "0.0.0",
+  "description": "Project interface components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-/project-interface-components.git"
+  },
+  "keywords": [
+    "project",
+    "interface",
+    "components",
+    "ui",
+    "elements",
+    "react"
+  ],
+  "author": "Jamie Hoeks <j@skeoh.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j-/project-interface-components/issues"
+  },
+  "homepage": "https://github.com/j-/project-interface-components#readme"
+}
