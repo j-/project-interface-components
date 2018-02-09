@@ -1,8 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { NavBar } from 'pic';
+import { NavBar, FlexContainer, FlexItem } from '../../src';
 
 storiesOf('NavBar', module)
 	.add('basic', () => (
-		<NavBar />
+		<NavBar>
+			<FlexItem flexGrow={1}>
+				Hello
+			</FlexItem>
+			<FlexItem flexGrow={1}>
+				World
+			</FlexItem>
+		</NavBar>
 	));
