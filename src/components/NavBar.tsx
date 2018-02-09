@@ -6,5 +6,6 @@ export const NavBar = theme.div`
 	min-height: 3em;
 	line-height: 1em;
 	padding: 1em;
+	box-sizing: border-box;
 	background-color: ${props => props.theme.primaryColor};
 `;
