@@ -1,4 +1,6 @@
 import { configure } from '@storybook/react';
+import '../src/index.css';
+import './styles.css';
 
 configure(() => {
 	// Require all stories dynamically
