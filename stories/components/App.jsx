@@ -16,7 +16,7 @@ storiesOf('App', module)
 		</App>
 	))
 	.add('red', () => (
-		<App primaryColor="#800">
+		<App primaryColor="hsl(0, 80%, 60%)">
 			<NavBar>
 				<Container>
 					Header

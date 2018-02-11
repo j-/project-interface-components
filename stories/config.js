@@ -8,7 +8,7 @@ addDecorator(
 	storybookStyledComponents({
 		'Blue': { primaryColor: '#09c' },
 		'Green': { primaryColor: '#9c3' },
-		'Red': { primaryColor: '#800' },
+		'Red': { primaryColor: 'hsl(0, 80%, 60%)' },
 	}),
 );
 
