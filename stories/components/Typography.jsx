@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { Padded } from '../decorators';
 
 const DummyParagraph1 = () => (
 	<p>
@@ -24,6 +25,7 @@ const DummyParagraph2 = () => (
 );
 
 storiesOf('Typography', module)
+	.addDecorator(Padded)
 	.add('basic', () => (
 		<div>
 			<h1>Heading<br />One</h1>

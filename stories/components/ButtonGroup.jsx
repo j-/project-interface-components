@@ -1,9 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { Padded } from '../decorators';
 import { Button, ButtonGroup } from '../../src';
 import { ThemeProvider } from '../../src/theme';
 
 storiesOf('ButtonGroup', module)
+	.addDecorator(Padded)
 	.add('default', () => (
 		<ButtonGroup>
 			<Button type="button">Foo</Button>
