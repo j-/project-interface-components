@@ -7,6 +7,7 @@ import './styles.css';
 addDecorator(
 	storybookStyledComponents({
 		'Blue': { primaryColor: '#09c' },
+		'Green': { primaryColor: '#9c3' },
 		'Red': { primaryColor: '#800' },
 	}),
 );
