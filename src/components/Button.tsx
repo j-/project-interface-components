@@ -7,6 +7,9 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 	intent?: Intent;
 }
 
+const darken = (input: string, amount: number) => color(input).darken(amount).toString();
+const lighten = (input: string, amount: number) => color(input).lighten(amount).toString();
+
 export const Button = theme.button`
 	cursor: pointer;
 	color: #444;
@@ -19,10 +22,20 @@ export const Button = theme.button`
 	font-size: inherit;
 	border-radius: 0.25rem;
 
+	&:hover {
+		background-color: ${props => lighten('#eee', 2.5)};
+		border-color: ${props => lighten('#ddd', 5)};
+	}
+
 	${(props: ButtonProps) => props.intent === 'primary' && css`
 		color: #fff;
 		background-color: ${props => props.theme.primaryColor};
-		border-color: ${props => color(props.theme.primaryColor).darken(10).toString()};
+		border-color: ${props => darken(props.theme.primaryColor, 10)};
+
+		&:hover {
+			background-color: ${props => lighten(props.theme.primaryColor, 5)};
+			border-color: ${props => darken(props.theme.primaryColor, 5)};
+		}
 	`}
 
 	${(props: ButtonProps) => props.disabled && css`
