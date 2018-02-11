@@ -24,7 +24,7 @@ export const Button = theme.button`
 
 	&:hover {
 		background-color: ${props => lighten('#eee', 2.5)};
-		border-color: ${props => lighten('#ddd', 5)};
+		border-bottom-color: ${props => lighten('#ddd', 5)};
 	}
 
 	${(props: ButtonProps) => props.intent === 'primary' && css`
@@ -34,7 +34,7 @@ export const Button = theme.button`
 
 		&:hover {
 			background-color: ${props => lighten(props.theme.primaryColor, 5)};
-			border-color: ${props => darken(props.theme.primaryColor, 5)};
+			border-bottom-color: ${props => darken(props.theme.primaryColor, 5)};
 		}
 	`}
 
