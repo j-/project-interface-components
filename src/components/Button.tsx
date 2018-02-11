@@ -2,6 +2,7 @@ import * as React from 'react';
 import theme, { ThemeProps, css } from '../theme';
 import { Intent } from '../types';
 import * as color from 'tinycolor2';
+import * as mixins from '../theme/mixins';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, ThemeProps {
 	intent?: Intent;
@@ -11,6 +12,7 @@ const darken = (input: string, amount: number) => color(input).darken(amount).to
 const lighten = (input: string, amount: number) => color(input).lighten(amount).toString();
 
 export const Button = theme.button`
+	${mixins.round}
 	cursor: pointer;
 	color: #444;
 	background-color: #eee;
@@ -20,7 +22,6 @@ export const Button = theme.button`
 	line-height: 1em;
 	padding: 0.5em 1em;
 	font-size: inherit;
-	border-radius: 0.25rem;
 
 	&:hover {
 		background-color: ${props => lighten('#eee', 2.5)};
