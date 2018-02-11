@@ -13,6 +13,7 @@ const lighten = (input: string, amount: number) => color(input).lighten(amount).
 
 export const Button = theme.button`
 	${mixins.round}
+	display: inline-block;
 	cursor: pointer;
 	color: #444;
 	background-color: #eee;
@@ -22,6 +23,10 @@ export const Button = theme.button`
 	line-height: 1em;
 	padding: 0.5em 1em;
 	font-size: inherit;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: baseline;
+	box-sizing: border-box;
 
 	&:hover {
 		background-color: ${props => lighten('#eee', 2.5)};
