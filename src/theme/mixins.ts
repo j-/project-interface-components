@@ -1,6 +1,9 @@
 import { css } from './';
+import * as color from 'tinycolor2';
 
 const BORDER_RADIUS = '0.25rem';
+
+const darken = (value: string, amount: number) => color(value).darken(amount).toString();
 
 export const roundTopLeft = () => css`
 	border-top-left-radius: ${BORDER_RADIUS};
@@ -43,4 +46,18 @@ export const round = () => css`
 	${roundTopRight}
 	${roundBottomLeft}
 	${roundBottomRight}
+`;
+
+export const focusShadowDefault = () => css`
+	outline: none;
+	box-shadow:
+		0 0 0 1px #bbb,
+		0 0 5px #ccc;
+`;
+
+export const focusShadowPrimary = () => css`
+	outline: none;
+	box-shadow:
+		0 0 0 1px ${props => darken(props.theme.primaryColor, 20)},
+		0 0 5px ${props => props.theme.primaryColor};
 `;

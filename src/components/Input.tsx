@@ -19,8 +19,16 @@ export const Input = theme.input`
 	padding: 0.5em 1em;
 	font-size: inherit;
 
+	&:focus {
+		${mixins.focusShadowDefault}
+	}
+
 	${(props: InputProps) => props.intent === 'primary' && css`
 		border-color: ${props => props.theme.primaryColor};
+
+		&:focus {
+			${mixins.focusShadowPrimary}
+		}
 	`}
 
 	${(props: InputProps) => props.disabled && css`
