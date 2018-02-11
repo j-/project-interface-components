@@ -3,7 +3,7 @@ import theme, { ThemeProps, css } from '../theme';
 import { Intent } from '../types';
 import * as color from 'tinycolor2';
 
-export interface ButtonInterface extends ThemeProps {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, ThemeProps {
 	intent?: Intent;
 }
 
@@ -19,9 +19,17 @@ export const Button = theme.button`
 	font-size: inherit;
 	border-radius: 0.25rem;
 
-	${(props: ButtonInterface) => props.intent === 'primary' && css`
+	${(props: ButtonProps) => props.intent === 'primary' && css`
 		color: #fff;
 		background-color: ${props => props.theme.primaryColor};
 		border-color: ${props => color(props.theme.primaryColor).darken(10).toString()};
+	`}
+
+	${(props: ButtonProps) => props.disabled && css`
+		cursor: default;
+		color: #888;
+		background-color: #ddd;
+		border-color: #ddd;
+		pointer-events: none;
 	`}
 `;
