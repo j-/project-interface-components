@@ -51,8 +51,8 @@ export const round = () => css`
 export const focusShadowDefault = () => css`
 	outline: none;
 	box-shadow:
-		0 0 0 1px #bbb,
-		0 0 5px #ccc;
+		0 0 0 1px #888,
+		0 0 5px #aaa;
 `;
 
 export const focusShadowPrimary = () => css`
