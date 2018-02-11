@@ -7,4 +7,5 @@ export * from './components/ButtonGroup';
 export * from './components/Container';
 export * from './components/FlexContainer';
 export * from './components/FlexItem';
+export * from './components/Input';
 export * from './components/NavBar';
