@@ -36,6 +36,14 @@ storiesOf('ButtonGroup', module)
 			<Button type="button">Baz</Button>
 		</ButtonGroup>
 	))
+	.add('horizontal 100% high', () => (
+		<ButtonGroup style={{ height: '100%' }}>
+			<Button type="button">Foo</Button>
+			<Button type="button">Bar</Button>
+			<Button type="button" disabled={true}>Qux</Button>
+			<Button type="button">Baz</Button>
+		</ButtonGroup>
+	))
 	.add('vertical', () => (
 		<ButtonGroup vertical={true}>
 			<Button type="button">Foo</Button>
