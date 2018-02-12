@@ -22,6 +22,14 @@ storiesOf('ButtonGroup', module)
 			<Button type="button" intent="primary">Baz</Button>
 		</ButtonGroup>
 	))
+	.add('vertical', () => (
+		<ButtonGroup vertical={true}>
+			<Button type="button">Foo</Button>
+			<Button type="button">Bar</Button>
+			<Button type="button" disabled={true}>Qux</Button>
+			<Button type="button">Baz</Button>
+		</ButtonGroup>
+	))
 	.add('rainbow', () => (
 		<ButtonGroup>
 			<ThemeProvider theme={{ primaryColor: 'hsl(0, 80%, 60%)' }}>
