@@ -22,6 +22,12 @@ storiesOf('ButtonGroup', module)
 			<Button type="button" intent="primary">Baz</Button>
 		</ButtonGroup>
 	))
+	.add('double height item', () => (
+		<ButtonGroup>
+			<Button type="button">Foo<br/>Bar</Button>
+			<Button type="button">Baz</Button>
+		</ButtonGroup>
+	))
 	.add('horizontal 100% wide', () => (
 		<ButtonGroup style={{ width: '100%' }}>
 			<Button type="button">Foo</Button>
