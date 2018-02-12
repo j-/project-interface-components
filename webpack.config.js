@@ -6,7 +6,7 @@ module.exports = {
 	entry: resolve(__dirname, './src/index.ts'),
 
 	output: {
-		filename: 'pic.js',
+		filename: 'index.js',
 		path: resolve(__dirname, './out/build/'),
 	},
 
