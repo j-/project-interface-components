@@ -1,6 +1,6 @@
 {
   "name": "@skeoh/pic",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Project interface components",
   "main": "out/build/index.js",
   "scripts": {
