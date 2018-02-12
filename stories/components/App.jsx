@@ -7,23 +7,12 @@ storiesOf('App', module)
 		<App primaryColor="#09c">
 			<NavBar>
 				<Container>
-					Header
+					Logo, buttons and links
 				</Container>
 			</NavBar>
 			<Container>
-				Body
-			</Container>
-		</App>
-	))
-	.add('red', () => (
-		<App primaryColor="hsl(0, 80%, 60%)">
-			<NavBar>
-				<Container>
-					Header
-				</Container>
-			</NavBar>
-			<Container>
-				Body
+				<h1>Application demo</h1>
+				<p>Some content would go here</p>
 			</Container>
 		</App>
 	));
