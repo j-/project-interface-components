@@ -1,5 +1,5 @@
 {
-  "name": "pic",
+  "name": "@skeoh/pic",
   "version": "0.0.0",
   "description": "Project interface components",
   "main": "index.js",
