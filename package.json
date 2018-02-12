@@ -11,7 +11,8 @@
     "build-storybook": "build-storybook -c stories -o out/storybook",
     "build": "cross-env NODE_ENV=production webpack -p",
     "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d out/storybook"
+    "deploy": "gh-pages -d out/storybook",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
