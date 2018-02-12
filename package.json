@@ -2,7 +2,7 @@
   "name": "@skeoh/pic",
   "version": "0.1.1",
   "description": "Project interface components",
-  "main": "index.js",
+  "main": "out/build/pic.js",
   "scripts": {
     "lint": "tslint src/**/*.{ts,tsx}",
     "test": "npm run lint",
