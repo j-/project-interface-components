@@ -6,14 +6,13 @@ export interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement>, 
 	vertical?: boolean;
 }
 
-const ButtonGroupInner = theme.div`
-	display: flex;
-`;
+const ButtonGroupInner = theme.div``;
 
 const ButtonGroupOuter = theme.div`
 	display: inline-block;
 
 	${ButtonGroupInner} {
+		display: flex;
 		width: 100%;
 		height: 100%;
 	}
