@@ -6,23 +6,28 @@ export interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement>, 
 	vertical?: boolean;
 }
 
-export const ButtonGroup = theme.div`
+const ButtonGroupInner = theme.div`
 	display: flex;
+`;
 
-	${Button}:disabled {
+const ButtonGroupOuter = theme.div`
+	display: inline-block;
+
+	${ButtonGroupInner} ${Button}:disabled {
 		z-index: 0;
 	}
 
-	${Button} {
+	${ButtonGroupInner} ${Button} {
 		position: relative;
 		z-index: 1;
+		flex: 1;
 	}
 
-	${Button}:hover {
+	${ButtonGroupInner} ${Button}:hover {
 		z-index: 2;
 	}
 
-	${Button}:focus {
+	${ButtonGroupInner} ${Button}:focus {
 		z-index: 3;
 	}
 
@@ -30,14 +35,16 @@ export const ButtonGroup = theme.div`
 
 		/* Vertical */
 
-		flex-direction: column;
+		${ButtonGroupInner} {
+			flex-direction: column;
+		}
 
-		${Button}:not(:last-child) {
+		${ButtonGroupInner} ${Button}:not(:last-child) {
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
 		}
 
-		${Button}:not(:first-child) {
+		${ButtonGroupInner} ${Button}:not(:first-child) {
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 		}
@@ -46,18 +53,28 @@ export const ButtonGroup = theme.div`
 
 		/* Horizontal */
 
-		flex-direction: row;
+		${ButtonGroupInner} {
+			flex-direction: row;
+		}
 
-		${Button}:not(:last-child) {
+		${ButtonGroupInner} ${Button}:not(:last-child) {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 			border-right-width: 1px;
 		}
 
-		${Button}:not(:first-child) {
+		${ButtonGroupInner} ${Button}:not(:first-child) {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 		}
 
 	`}
 `;
+
+export const ButtonGroup: React.StatelessComponent<ButtonGroupProps> = ({ children, ...props }) => (
+	<ButtonGroupOuter {...props}>
+		<ButtonGroupInner>
+			{children}
+		</ButtonGroupInner>
+	</ButtonGroupOuter>
+);

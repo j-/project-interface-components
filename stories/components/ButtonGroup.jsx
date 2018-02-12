@@ -22,8 +22,24 @@ storiesOf('ButtonGroup', module)
 			<Button type="button" intent="primary">Baz</Button>
 		</ButtonGroup>
 	))
+	.add('horizontal 100% wide', () => (
+		<ButtonGroup style={{ width: '100%' }}>
+			<Button type="button">Foo</Button>
+			<Button type="button">Bar</Button>
+			<Button type="button" disabled={true}>Qux</Button>
+			<Button type="button">Baz</Button>
+		</ButtonGroup>
+	))
 	.add('vertical', () => (
 		<ButtonGroup vertical={true}>
+			<Button type="button">Foo</Button>
+			<Button type="button">Bar</Button>
+			<Button type="button" disabled={true}>Qux</Button>
+			<Button type="button">Baz</Button>
+		</ButtonGroup>
+	))
+	.add('vertical 100% wide', () => (
+		<ButtonGroup vertical={true} style={{ width: '100%' }}>
 			<Button type="button">Foo</Button>
 			<Button type="button">Bar</Button>
 			<Button type="button" disabled={true}>Qux</Button>
