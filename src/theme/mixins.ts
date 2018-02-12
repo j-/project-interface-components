@@ -1,3 +1,7 @@
+import { StyledComponentClass, Styles, InterpolationFunction, ThemeProps } from 'styled-components';
+import { Theme } from './interface';
+// Above imports resolve TS4023
+
 import { css } from './';
 import * as color from 'tinycolor2';
 

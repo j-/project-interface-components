@@ -1,3 +1,6 @@
+import { ComponentClass } from 'react';
+// Above imports resolve TS4023
+
 import * as sc from 'styled-components';
 
 import { Theme } from './interface';

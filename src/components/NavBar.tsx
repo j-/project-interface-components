@@ -1,3 +1,8 @@
+import { StyledComponentClass } from 'styled-components';
+import { Theme } from '../theme';
+import { FlexContainerProps } from './FlexContainer';
+// Above imports resolve TS4023
+
 import * as React from 'react';
 import theme from '../theme';
 import { FlexContainer } from './FlexContainer';
