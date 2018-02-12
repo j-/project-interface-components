@@ -13,6 +13,11 @@ const ButtonGroupInner = theme.div`
 const ButtonGroupOuter = theme.div`
 	display: inline-block;
 
+	${ButtonGroupInner} {
+		width: 100%;
+		height: 100%;
+	}
+
 	${ButtonGroupInner} ${Button}:disabled {
 		z-index: 0;
 	}
