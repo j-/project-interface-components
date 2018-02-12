@@ -51,5 +51,8 @@
     "tslint-react": "^3.4.0",
     "typescript": "^2.7.1",
     "webpack": "^3.10.0"
-  }
+  },
+  "files": [
+    "out/build"
+  ]
 }
