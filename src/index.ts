@@ -1,6 +1,10 @@
 export const ENV = process.env.NODE_ENV;
 export const VERSION = process.env.VERSION;
 
+// Force declaration files to be generated
+export * from './types';
+export * from './theme/interface';
+
 export * from './components/App';
 export * from './components/Button';
 export * from './components/ButtonGroup';
