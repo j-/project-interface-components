@@ -3,6 +3,7 @@
   "version": "0.1.5",
   "description": "Project interface components",
   "main": "out/build/index.js",
+  "types": "out/build/index.d.ts",
   "scripts": {
     "lint": "tslint src/**/*.{ts,tsx}",
     "test": "npm run lint",
