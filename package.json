@@ -10,7 +10,7 @@
     "start-storybook": "start-storybook -c stories -p 9001",
     "start": "npm run start-storybook",
     "build-storybook": "build-storybook -c stories -o out/storybook",
-    "build": "cross-env NODE_ENV=production webpack -p",
+    "build": "tsc",
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d out/storybook",
     "prepare": "npm run build"
