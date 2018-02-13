@@ -1,4 +1,5 @@
 import React from 'react';
+import { App as AppComponent } from '../src';
 
 const paddedStyle = {
 	padding: '1em',
@@ -11,4 +12,10 @@ export const Padded = (storyFn) => (
 	<div style={paddedStyle}>
 		{storyFn()}
 	</div>
+);
+
+export const App = (storyFn) => (
+	<AppComponent>
+		{storyFn()}
+	</AppComponent>
 );

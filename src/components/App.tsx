@@ -5,6 +5,30 @@ export interface AppProps {
 	primaryColor: string;
 }
 
+const H1_FONT_SIZE = 4;
+const H1_MARGIN = (1 / H1_FONT_SIZE);
+const H1_LINE_HEIGHT = (5 / H1_FONT_SIZE);
+
+const H2_FONT_SIZE = 3;
+const H2_MARGIN = (1 / H2_FONT_SIZE);
+const H2_LINE_HEIGHT = (4 / H2_FONT_SIZE);
+
+const H3_FONT_SIZE = 2.5;
+const H3_MARGIN = (1 / H3_FONT_SIZE);
+const H3_LINE_HEIGHT = (4 / H3_FONT_SIZE);
+
+const H4_FONT_SIZE = 2;
+const H4_MARGIN = (1 / H4_FONT_SIZE);
+const H4_LINE_HEIGHT = (3 / H4_FONT_SIZE);
+
+const H5_FONT_SIZE = 1.5;
+const H5_MARGIN = (1 / H5_FONT_SIZE);
+const H5_LINE_HEIGHT = (3 / H5_FONT_SIZE);
+
+const H6_FONT_SIZE = 1;
+const H6_MARGIN = (1 / H6_FONT_SIZE);
+const H6_LINE_HEIGHT = (2 / H6_FONT_SIZE);
+
 const AppInner = theme.div`
 	font-size: 16px;
 	font-family: Arial, sans-serif;
@@ -16,51 +40,45 @@ const AppInner = theme.div`
 	}
 
 	h1 {
-		font-size: 4em;
-		line-height: 1.25em;
-		margin-top: 0.25em;
-		margin-bottom: 0.25em;
+		font-size: ${H1_FONT_SIZE}em;
+		line-height: ${H1_LINE_HEIGHT}em;
+		margin-top: ${H1_MARGIN}em;
+		margin-bottom: ${H1_MARGIN}em;
 	}
 
 	h2 {
-		font-size: 3em;
-		line-height: 1.33333em;
-		margin-top: 0.33333em;
-		margin-bottom: 0.33333em;
+		font-size: ${H2_FONT_SIZE}em;
+		line-height: ${H2_LINE_HEIGHT}em;
+		margin-top: ${H2_MARGIN}em;
+		margin-bottom: ${H2_MARGIN}em;
 	}
 
 	h3 {
-		font-size: 2.5em;
-		line-height: 1.6em;
-		margin-top: 0.4em;
-		margin-bottom: 0.4em;
+		font-size: ${H3_FONT_SIZE}em;
+		line-height: ${H3_LINE_HEIGHT}em;
+		margin-top: ${H3_MARGIN}em;
+		margin-bottom: ${H3_MARGIN}em;
 	}
 
 	h4 {
-		font-size: 2em;
-		line-height: 1.5em;
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		font-size: ${H4_FONT_SIZE}em;
+		line-height: ${H4_LINE_HEIGHT}em;
+		margin-top: ${H4_MARGIN}em;
+		margin-bottom: ${H4_MARGIN}em;
 	}
 
 	h5 {
-		font-size: 1.5em;
-		line-height: 2em;
-		margin-top: 0.66666em;
-		margin-bottom: 0.66666em;
+		font-size: ${H5_FONT_SIZE}em;
+		line-height: ${H5_LINE_HEIGHT}em;
+		margin-top: ${H5_MARGIN}em;
+		margin-bottom: ${H5_MARGIN}em;
 	}
 
 	h6 {
-		font-size: 1em;
-		line-height: 2em;
-		margin-top: 1em;
-		margin-bottom: 1em;
-	}
-
-	body {
-		margin: 0;
-		padding: 0;
-		font-family: sans-serif;
+		font-size: ${H6_FONT_SIZE}em;
+		line-height: ${H6_LINE_HEIGHT}em;
+		margin-top: ${H6_MARGIN}em;
+		margin-bottom: ${H6_MARGIN}em;
 	}
 
 	button,

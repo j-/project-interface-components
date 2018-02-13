@@ -1,5 +1,6 @@
 import { configure, addDecorator } from '@storybook/react';
 import { decorator as storybookStyledComponents } from './styled-components';
+import { App } from './decorators';
 
 import './styles.css';
 
@@ -10,6 +11,8 @@ addDecorator(
 		'Red': { primaryColor: 'hsl(0, 80%, 60%)' },
 	}),
 );
+
+addDecorator(App);
 
 configure(() => {
 	// Require all stories dynamically
