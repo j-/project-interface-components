@@ -3,12 +3,12 @@ import { Theme } from '../theme';
 // Above imports resolve TS4023
 
 import * as React from 'react';
-import theme, { ThemeProps, css } from '../theme';
+import theme, { css } from '../theme';
 import { Intent } from '../types';
 import * as color from 'tinycolor2';
 import * as mixins from '../theme/mixins';
 
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>, ThemeProps {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	intent?: Intent;
 }
 
