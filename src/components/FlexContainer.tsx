@@ -20,3 +20,5 @@ export const FlexContainer = theme.div`
 	justify-content: ${(props: FlexContainerProps) => props.justifyContent || 'flex-start'}
 	align-items: ${(props: FlexContainerProps) => props.alignItems || 'stretch'}
 `;
+
+FlexContainer.displayName = 'FlexContainer';

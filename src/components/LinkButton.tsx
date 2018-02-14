@@ -6,3 +6,5 @@ import { Theme } from '../theme';
 import { Button } from './Button';
 
 export const LinkButton = Button.withComponent('a');
+
+LinkButton.displayName = 'LinkButton';

@@ -64,3 +64,5 @@ export const Button = theme.button`
 		pointer-events: none;
 	`}
 `;
+
+Button.displayName = 'Button';

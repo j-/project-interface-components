@@ -20,3 +20,5 @@ export const FlexItem = theme.div`
 	flex-basis: ${(props: FlexItemProps) => props.flexBasis || 'auto'};
 	align-self: ${(props: FlexItemProps) => props.alignSelf || 'stretch'};
 `;
+
+FlexItem.displayName = 'FlexItem';

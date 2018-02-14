@@ -19,3 +19,5 @@ export const NavBar = theme(FlexContainer)`
 	color: #fff;
 	background-color: ${props => darken(props.theme.primaryColor, 5)};
 `;
+
+NavBar.displayName = 'NavBar';

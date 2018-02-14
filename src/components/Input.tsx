@@ -42,3 +42,5 @@ export const Input = theme.input`
 		pointer-events: none;
 	`}
 `;
+
+Input.displayName = 'Input';

@@ -9,3 +9,5 @@ export const Container = theme.div`
 	width: 72em;
 	margin: 0 auto;
 `;
+
+Container.displayName = 'Container';
