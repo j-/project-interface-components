@@ -3,9 +3,9 @@ import { Theme } from '../theme';
 // Above imports resolve TS4023
 
 import * as React from 'react';
-import theme, { ThemeProps } from '../theme';
+import theme from '../theme';
 
-export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement>, ThemeProps {
+export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 
 }
 

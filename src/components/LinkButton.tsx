@@ -5,10 +5,9 @@ import { ButtonProps } from './Button';
 // Above imports resolve TS4023
 
 import { AnchorHTMLAttributes } from 'react';
-import { ThemeProps } from '../theme';
 import { Button } from './Button';
 
-export interface LinkButtonProps extends AnchorHTMLAttributes<HTMLTextAreaElement>, ThemeProps {
+export interface LinkButtonProps extends AnchorHTMLAttributes<HTMLTextAreaElement> {
 
 }
 

@@ -5,11 +5,10 @@ import { InputProps } from './Input';
 // Above imports resolve TS4023
 
 import { TextareaHTMLAttributes } from 'react';
-import { ThemeProps } from '../theme';
 import { Input } from './Input';
 import { Intent } from '../types';
 
-export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>, ThemeProps {
+export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 	intent?: Intent;
 }
 

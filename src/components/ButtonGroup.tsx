@@ -1,8 +1,8 @@
 import * as React from 'react';
-import theme, { ThemeProps, css } from '../theme';
+import theme, { css } from '../theme';
 import { Button } from './Button';
 
-export interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement>, ThemeProps {
+export interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 	vertical?: boolean;
 }
 

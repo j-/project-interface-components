@@ -3,9 +3,9 @@ import { Theme } from '../theme';
 // Above imports resolve TS4023
 
 import * as React from 'react';
-import theme, { ThemeProps } from '../theme';
+import theme from '../theme';
 
-export interface FlexContainerProps extends ThemeProps {
+export interface FlexContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 	flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
 	flexWrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
 	justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';

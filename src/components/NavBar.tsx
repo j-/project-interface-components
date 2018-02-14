@@ -3,13 +3,13 @@ import { Theme } from '../theme';
 // Above imports resolve TS4023
 
 import { HTMLAttributes } from 'react';
-import theme, { ThemeProps } from '../theme';
+import theme from '../theme';
 import { FlexContainer, FlexContainerProps } from './FlexContainer';
 import * as color from 'tinycolor2';
 
 const darken = (input: string, amount: number) => color(input).darken(amount).toString();
 
-export interface NavBarProps extends HTMLAttributes<HTMLDivElement>, ThemeProps {
+export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
 
 }
 

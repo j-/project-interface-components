@@ -3,9 +3,9 @@ import { Theme } from '../theme';
 // Above imports resolve TS4023
 
 import * as React from 'react';
-import theme, { ThemeProps } from '../theme';
+import theme from '../theme';
 
-export interface FlexItemProps extends ThemeProps {
+export interface FlexItemProps extends React.HTMLAttributes<HTMLDivElement> {
 	order?: number;
 	flexGrow?: number;
 	flexShrink?: number;
