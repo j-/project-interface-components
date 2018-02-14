@@ -13,12 +13,12 @@ export interface FlexContainerProps extends ThemeProps {
 	alignContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'stretch';
 }
 
-export const FlexContainer = theme.div`
+export const FlexContainer = theme<FlexContainerProps, 'div'>('div')`
 	display: flex;
-	flex-direction: ${(props: FlexContainerProps) => props.flexDirection || 'row'}
-	flex-wrap: ${(props: FlexContainerProps) => props.flexWrap || 'nowrap'}
-	justify-content: ${(props: FlexContainerProps) => props.justifyContent || 'flex-start'}
-	align-items: ${(props: FlexContainerProps) => props.alignItems || 'stretch'}
+	flex-direction: ${props => props.flexDirection || 'row'}
+	flex-wrap: ${props => props.flexWrap || 'nowrap'}
+	justify-content: ${props => props.justifyContent || 'flex-start'}
+	align-items: ${props => props.alignItems || 'stretch'}
 `;
 
 FlexContainer.displayName = 'FlexContainer';

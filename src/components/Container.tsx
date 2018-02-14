@@ -3,9 +3,13 @@ import { Theme } from '../theme';
 // Above imports resolve TS4023
 
 import * as React from 'react';
-import theme from '../theme';
+import theme, { ThemeProps } from '../theme';
 
-export const Container = theme.div`
+export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement>, ThemeProps {
+
+}
+
+export const Container = theme<ContainerProps, 'div'>('div')`
 	width: 72em;
 	margin: 0 auto;
 `;

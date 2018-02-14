@@ -13,12 +13,12 @@ export interface FlexItemProps extends ThemeProps {
 	alignSelf?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
 }
 
-export const FlexItem = theme.div`
-	order: ${(props: FlexItemProps) => props.order || 0};
-	flex-grow: ${(props: FlexItemProps) => props.flexGrow || 0};
-	flex-shrink: ${(props: FlexItemProps) => props.flexShrink || 1};
-	flex-basis: ${(props: FlexItemProps) => props.flexBasis || 'auto'};
-	align-self: ${(props: FlexItemProps) => props.alignSelf || 'stretch'};
+export const FlexItem = theme<FlexItemProps, 'div'>('div')`
+	order: ${props => props.order || 0};
+	flex-grow: ${props => props.flexGrow || 0};
+	flex-shrink: ${props => props.flexShrink || 1};
+	flex-basis: ${props => props.flexBasis || 'auto'};
+	align-self: ${props => props.alignSelf || 'stretch'};
 `;
 
 FlexItem.displayName = 'FlexItem';

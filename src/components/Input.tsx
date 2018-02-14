@@ -12,7 +12,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>,
 	intent?: Intent;
 }
 
-export const Input = theme.input`
+export const Input = theme<InputProps, 'input'>('input')`
 	${mixins.round}
 	color: #222;
 	background-color: #fff;
@@ -27,7 +27,7 @@ export const Input = theme.input`
 		${mixins.focusShadowDefault}
 	}
 
-	${(props: InputProps) => props.intent === 'primary' && css`
+	${props => props.intent === 'primary' && css`
 		border-color: ${props => props.theme.primaryColor};
 
 		&:focus {
@@ -35,7 +35,7 @@ export const Input = theme.input`
 		}
 	`}
 
-	${(props: InputProps) => props.disabled && css`
+	${props => props.disabled && css`
 		color: #888;
 		background-color: #eee;
 		border-color: #ddd;

@@ -1,16 +1,19 @@
 import { StyledComponentClass } from 'styled-components';
 import { Theme } from '../theme';
-import { FlexContainerProps } from './FlexContainer';
 // Above imports resolve TS4023
 
-import * as React from 'react';
-import theme from '../theme';
-import { FlexContainer } from './FlexContainer';
+import { HTMLAttributes } from 'react';
+import theme, { ThemeProps } from '../theme';
+import { FlexContainer, FlexContainerProps } from './FlexContainer';
 import * as color from 'tinycolor2';
 
 const darken = (input: string, amount: number) => color(input).darken(amount).toString();
 
-export const NavBar = theme(FlexContainer)`
+export interface NavBarProps extends HTMLAttributes<HTMLDivElement>, ThemeProps {
+
+}
+
+export const NavBar = theme<NavBarProps, FlexContainerProps>(FlexContainer)`
 	width: 100%;
 	min-height: 3em;
 	line-height: 1em;

@@ -15,7 +15,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 const darken = (input: string, amount: number) => color(input).darken(amount).toString();
 const lighten = (input: string, amount: number) => color(input).lighten(amount).toString();
 
-export const Button = theme.button`
+export const Button = theme<ButtonProps, 'button'>('button')`
 	${mixins.round}
 	display: inline-block;
 	cursor: pointer;
@@ -41,7 +41,7 @@ export const Button = theme.button`
 		${mixins.focusShadowDefault}
 	}
 
-	${(props: ButtonProps) => props.intent === 'primary' && css`
+	${props => props.intent === 'primary' && css`
 		color: #fff;
 		background-color: ${props => props.theme.primaryColor};
 		border-color: ${props => darken(props.theme.primaryColor, 10)};
@@ -56,7 +56,7 @@ export const Button = theme.button`
 		}
 	`}
 
-	${(props: ButtonProps) => props.disabled && css`
+	${props => props.disabled && css`
 		cursor: default;
 		color: #888;
 		background-color: #ddd;

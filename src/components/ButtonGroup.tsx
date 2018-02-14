@@ -6,9 +6,11 @@ export interface ButtonGroupProps extends React.HTMLAttributes<HTMLDivElement>, 
 	vertical?: boolean;
 }
 
-const ButtonGroupInner = theme.div``;
+type ButtonGroupInnerProps = React.HTMLAttributes<HTMLDivElement>;
+const ButtonGroupInner = theme<ButtonGroupInnerProps, 'div'>('div')``;
 
-const ButtonGroupOuter = theme.div`
+type ButtonGroupOuterProps = ButtonGroupProps;
+const ButtonGroupOuter = theme<ButtonGroupOuterProps, 'div'>('div')`
 	display: inline-block;
 
 	${ButtonGroupInner} {
@@ -35,7 +37,7 @@ const ButtonGroupOuter = theme.div`
 		z-index: 3;
 	}
 
-	${(props: ButtonGroupProps) => props.vertical ? css`
+	${props => props.vertical ? css`
 
 		/* Vertical */
 
